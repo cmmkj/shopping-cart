@@ -1,11 +1,10 @@
 this is a shopping-cart code
 
 you can download it as fallow:
-    git clone git@github.com:yuxinhua0/shoppingcart.git
+    git clone https://github.com/yuxinhua0/shopping-cart.git
 
 than 
-
-    cd shopping  
+    cd shopping-cart  
     npm install 
 
 last start the project:
