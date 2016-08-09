@@ -7,6 +7,10 @@ var bodyParser = require('body-parser');
 
 var exphbs = require('express-handlebars');
 
+var mongoose = require('mongoose');
+mongoose.connect("localhost:27017/shopping");
+
+
 var routes = require('./routes/index');
 //var users = require('./routes/users');
 
