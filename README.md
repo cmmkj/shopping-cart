@@ -11,3 +11,5 @@ last start the project:
     npm start
     
 # shopping-cart
+
+bcrypt-nodejs模块：密码加密模块
