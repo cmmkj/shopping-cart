@@ -12,6 +12,8 @@ var passport = require('passport');
 var flash = require('connect-flash');
 
 var validator = require('express-validator');
+var MongoStore = require('connect-mongo')(session);
+
 
 var mongoose = require('mongoose');
 mongoose.connect("localhost:27017/shopping");
@@ -45,6 +47,10 @@ app.use(session({
     secret: 'keyboard cat',
     resave: false,
     saveUninitialized: false,
+    store:new MongoStore({
+        mongooseConnection:mongoose.connection
+    }),
+    cookie:{maxAge:180*60*1000} //store保存时间
 }));
 
 //对session操作的模块，应在session实例下面
